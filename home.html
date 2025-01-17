@@ -10,7 +10,6 @@
     <link rel="icon" type="image/x-icon" href="images/thebigfatgreekgyroslogo.png">
   </head>
   <body>
-    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv41Y2HY_6xsyd_TDaMDz018n1KoF36H_ZTw&s" alt="The Big Fat Greek Gyros" height="187.0" width="187.0"> -->
     <nav class="navbar navbar-expand-lg bg-body-white">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="images/thebigfatgreekgyroslogo.png" class="rounded-circle" alt="The Big Fat Greek Gyros" height="100" width="100"></a>
@@ -43,7 +42,7 @@
               <a class="nav-link" href="contactus.html">Contact us</a>
             </li>
           </ul>
-            <a class="btn btn-outline-dark btn-lg d-none d-lg-inline" href="tel:+358505754091">050 575 4091</a> <!-- There is 2 restaurants, one in oulu and one in kuopio, what number to use? -->
+            <a class="btn btn-outline-dark btn-lg d-none d-lg-inline" href="tel:+358505754091">050 575 4091</a>
             <!-- d none  d lg inline scales for desktop -->
           </div>
         </div>
@@ -65,31 +64,54 @@
 
     <!-- add a space between the 4 circles and add text on top of them "oulu" "kuopio" -->
 
-    <div class="container my-5">
+
+    <div class="container mt-3">
       <div class="row text-center">
-        <div class="col-6 col-md-3">
+        <div class="col-md-4">
+          <h3>Oulu</h3>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 d-none d-md-block">
+          <h3>Kuopio</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-5 mt-3">
+      <div class="row text-center">
+        <div class="col-6 col-md-2"> <!-- change col-md-2 to col-md-3 for no spacing -->
           <a href="menu.html">
             <img src="images/ouluWinter.jpg" alt="ouluWinter" class="rounded-circle img-fluid">
-            <a href="menu.html" class="btn btn-white btn-outline-dark mt-3">Talvi</a>
+            <a href="menu.html" class="btn btn-white btn-outline-dark mt-3">Winter</a>
           </a>
         </div>
-        <div class="col-6 col-md-3">
+        <div class="col-6 col-md-2">
           <a href="menu.html">
             <img src="images/ouluKesa.jpg" alt="ouluKesa" class="rounded-circle img-fluid">
-            <a href="menu.html" class="btn btn-white btn-outline-dark mt-3">Kesä</a>
+            <a href="menu.html" class="btn btn-white btn-outline-dark mt-3">Summer</a>
           </a>
+        </div>
+
+        <div class="col-4"></div> <!-- this is the space between the 4 circles -->
+
+
+        <div class="col-sm-6 mt-4 d-block d-md-none">
+          <div class="col-12 d-block d-md-none">
+            <hr>
+          </div>
+          <h3>Kuopio</h3>
         </div>
         
-        <div class="col-6 col-md-3 mt-3 mt-md-0">
-          <a href="menu.html">
-            <img src="images/kuopiotoriKesa.jpg" alt="kuopiotoriKesa" class="rounded-circle img-fluid">
-            <a href="menu.html" class="btn btn-white btn-outline-dark mt-3">Kesä</a>
-          </a>
-        </div>
-        <div class="col-6 col-md-3 mt-3 mt-md-0">
+        <div class="col-6 col-md-2 mt-3 mt-md-0">
           <a href="menu.html">
             <img src="images/kuopioTalvi.jpg" alt="kuopioTalvi" class="rounded-circle img-fluid">
-            <a href="menu.html" class="btn btn-white btn-outline-dark mt-3">Talvi</a>
+            <a href="menu.html" class="btn btn-white btn-outline-dark mt-3">Winter</a>
+          </a>
+        </div>
+        <div class="col-6 col-md-2 mt-3 mt-md-0">
+          <a href="menu.html">
+            <img src="images/kuopiotoriKesa.jpg" alt="kuopiotoriKesa" class="rounded-circle img-fluid">
+            <a href="menu.html" class="btn btn-white btn-outline-dark mt-3">Summer</a>
           </a>
         </div>
       </div>
