@@ -1,4 +1,4 @@
-Website for a Greek restaurant.
+Website for a Greek restaurant. thebigfatgreekgyros.fi
 
 The website is fully built with Bootstrap.
 
@@ -11,4 +11,3 @@ Simple design
 Language selector
 
 
-thebigfatgreekgyros.fi
