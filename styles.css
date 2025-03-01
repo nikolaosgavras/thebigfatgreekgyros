@@ -1,4 +1,4 @@
-/*
+
 
 .poppins-thin {
     font-family: "Poppins", serif;
@@ -140,10 +140,30 @@ h5 {
     font-weight: 650;
 }
 
-*/
+.bluetext {
+  font-family: "Poppins", serif;
+  font-weight: 450;
+  color: #003297;
+}
+
+.btn {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    color: #003297;
+}
+
+
 
 .nav-item {
     font-size: 20px;
+}
+
+.nav-link {
+    color: #003297;
+}
+
+.active {
+    color: #2500cc !important; 
 }
 
 .whitebg {
