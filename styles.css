@@ -207,3 +207,16 @@ body {
     color: #fff !important; /* Change text color on hover */
   }
 
+  /* Phone icon responsive behavior */
+.phone-icon-svg {
+  display: none;
+}
+
+@media (max-width: 359px) {
+  .phone-number {
+    display: none;
+  }
+  .phone-icon-svg {
+    display: inline;
+  }
+}
