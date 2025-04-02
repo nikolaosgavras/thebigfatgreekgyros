@@ -18,7 +18,7 @@
         <div class="d-lg-none mx-auto">
           <a class="btn borderradius btn-outline-primary btn-lg phone-icon" href="tel:+358505754091">
             <span class="phone-number">050 575 4091</span>
-            <img src="https://icons.getbootstrap.com/assets/icons/telephone-fill.svg" class="phone-icon-svg" alt="Call" width="16" height="16">
+            <img src="https://icons.getbootstrap.com/assets/icons/telephone-fill.svg" class="phone-icon-svg" alt="Call us" width="16" height="16">
           </a>
         </div>
 
@@ -582,16 +582,16 @@
         <br>
         <br>
         <a href="https://www.facebook.com/p/The-Big-Fat-Greek-Gyros-100063344162591/" target="_blank" class="d-inline text-decoration-none me-3">
-          <img src="images/square-facebook-brands-solid.svg" alt="Facebook" width="30" height="30">
+          <img src="images/square-facebook-brands-solid.svg" alt="Facebook sivut" width="30" height="30">
         </a>
         <a href="https://www.instagram.com/thebigfatgreekgyros" target="_blank" class="d-inline text-decoration-none me-3">
-          <img src="images/instagram-brands-solid.svg" alt="Instagram" width="30" height="30">
+          <img src="images/instagram-brands-solid.svg" alt="Instagram sivut" width="30" height="30">
         </a>
         <a href="https://www.tiktok.com/@thebigfatgreekgyros" target="_blank" class="d-inline text-decoration-none me-3">
-          <img src="images/tiktok-brands-solid.svg" alt="TikTok" width="30" height="30">
+          <img src="images/tiktok-brands-solid.svg" alt="TikTok sivut" width="30" height="30">
         </a>
         <a href="https://fi.linkedin.com/company/the-big-fat-greek-gyros" target="_blank" class="d-inline text-decoration-none me-3">
-          <img src="images/linkedin-brands-solid.svg" alt="LinkedIn" width="30" height="30">
+          <img src="images/linkedin-brands-solid.svg" alt="LinkedIn sivut" width="30" height="30">
         </a>
         
         <br>
@@ -606,28 +606,6 @@
  
 
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var days = ['maanantai', 'tiistai', 'keskiviikko', 'torstai', 'perjantai', 'lauantai'];
-    
-    days.forEach(function(day) {
-      var menu = document.getElementById(day + 'Menu');
-      var image = document.getElementById(day + 'Image');
-
-      menu.addEventListener('show.bs.collapse', function () {
-        image.style.display = 'block';
-      });
-
-      menu.addEventListener('hide.bs.collapse', function () {
-        image.style.display = 'none';
-      });
-
-      // Initially hide the image if the menu is not visible
-      if (!menu.classList.contains('show')) {
-        image.style.display = 'none';
-      }
-    });
-  });
-</script>
+<script src="js/kuva.js"></script>
 </body>
 </html>
