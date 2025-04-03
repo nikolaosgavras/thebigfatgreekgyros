@@ -3,19 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Kreikkalainen ravintola Kuopiossa ja Oulussa."
-    />
     <title>The Big Fat Greek Gyros</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="icon"
       type="image/x-icon"
       href="images/thebigfatgreekgyroslogo.png"
     />
-    <link rel="canonical" href="https://thebigfatgreekgyros.fi/" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg sticky-top whitebg">
@@ -61,9 +57,7 @@
           <div class="d-flex w-100 justify-content-between">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Koti</a
-                >
+                <a class="nav-link" href="index.html">Koti</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="ruokalista.html">Menu</a>
@@ -72,7 +66,12 @@
                 <a class="nav-link" href="tietoameista.html">Tietoa meistä</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="pitopalvelu.html">Catering</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="pitopalvelu.html"
+                  >Catering</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="otayhteytta.html">Ota yhteyttä</a>
@@ -107,129 +106,102 @@
               href="tel:+358505754091"
               >050 575 4091</a
             >
+            <!-- There is 2 restaurants, one in oulu and one in kuopio, what number to use? -->
             <!-- d none  d lg inline scales for desktop -->
           </div>
         </div>
       </div>
     </nav>
 
-    <div class="container-fluid p-0 overflow-hidden">
+    <div class="container-fluid">
       <div class="row">
-        <div class="d-none d-md-block col-6 mb-3">
-          <img
-            src="images/thebigfatgreekgyros2.jpg"
-            class="img-fluid w-100"
-            alt="The Big Fat Greek Gyros"
-          />
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <br />
+          <h2 class="text-center">Catering</h2>
+          <form onsubmit="event.preventDefault(); sendEmail();" class="text-center">
+            <div class="row mb-4 justify-content-center">
+              <div class="col-md-10 text-center">
+                <p class="text-primary">(Remember to change the example items to the real ones)</p>
+                <h4 class="mb-3">Valitse 2 proteiinivaihtoehtoa:</h4>
+                <div class="form-check d-flex justify-content-center">
+                  <div>
+                    <input class="form-check-input protein-option" type="checkbox" name="protein[]" value="Gyros (naudanliha)" id="protein1" />
+                    <label class="form-check-label" for="protein1">Gyros (naudanliha)</label>
+                  </div>
+                </div>
+                <div class="form-check d-flex justify-content-center">
+                  <div>
+                    <input class="form-check-input protein-option" type="checkbox" name="protein[]" value="Souvlaki (porsaanliha)" id="protein2" />
+                    <label class="form-check-label" for="protein2">Souvlaki (porsaanliha)</label>
+                  </div>
+                </div>
+                <div class="form-check d-flex justify-content-center">
+                  <div>
+                    <input class="form-check-input protein-option" type="checkbox" name="protein[]" value="Kana (sitruuna-oregano)" id="protein3" />
+                    <label class="form-check-label" for="protein3">Kana (sitruuna-oregano)</label>
+                  </div>
+                </div>
+                <div class="form-check d-flex justify-content-center">
+                  <div>
+                    <input class="form-check-input protein-option" type="checkbox" name="protein[]" value="Lammas" id="protein4" />
+                    <label class="form-check-label" for="protein4">Lammas</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-4 justify-content-center">
+              <div class="col-md-10 text-center">
+                <h4 class="mb-3">Valitse 2 kasvisvaihtoehtoa:</h4>
+                <div class="form-check d-flex justify-content-center">
+                  <div>
+                    <input class="form-check-input veggie-option" type="checkbox" name="veggie[]" value="Kreikkalainen salaatti" id="veggie1" />
+                    <label class="form-check-label" for="veggie1">Kreikkalainen salaatti</label>
+                  </div>
+                </div>
+                <div class="form-check d-flex justify-content-center">
+                  <div>
+                    <input class="form-check-input veggie-option" type="checkbox" name="veggie[]" value="Tzatziki ja pitaleipä" id="veggie2" />
+                    <label class="form-check-label" for="veggie2">Tzatziki ja pitaleipä</label>
+                  </div>
+                </div>
+                <div class="form-check d-flex justify-content-center">
+                  <div>
+                    <input class="form-check-input veggie-option" type="checkbox" name="veggie[]" value="Paahdetut kasvikset" id="veggie3" />
+                    <label class="form-check-label" for="veggie3">Paahdetut kasvikset</label>
+                  </div>
+                </div>
+                <div class="form-check d-flex justify-content-center">
+                  <div>
+                    <input class="form-check-input veggie-option" type="checkbox" name="veggie[]" value="Dolmades (viininlehtikääryleet)" id="veggie4" />
+                    <label class="form-check-label" for="veggie4">Dolmades (viininlehtikääryleet)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-outline-primary border-2 mt-3">Lähetä lomake</button>
+          </form>
         </div>
-        <div class="d-none d-md-block col-6">
-          <img
-            src="images/kreikkalainenkotiruokabuffet.jpg"
-            class="img-fluid w-100"
-            alt="Kreikkalainen kotiruoan buffet Kuopiossa ja Oulussa"
-          />
-        </div>
-        <div class="d block d-md-none col-12">
-          <img
-            src="images/thebigfatgreekgyros2.jpg"
-            class="img-fluid w-100"
-            alt="The Big Fat Greek Gyros"
-          />
-        </div>
-        <div class="d block d-md-none col-12">
-          <img
-            src="images/kreikkalainenkotiruokabuffet.jpg"
-            class="img-fluid w-100"
-            alt="Kreikkalainen kotiruoan buffet Kuopiossa ja Oulussa"
-          />
-        </div>
+        <div class="col-md-3"></div>
       </div>
     </div>
 
-    <!-- add a space between the 4 circles and add text on top of them "oulu" "kuopio" -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-center mb-5 mt-3">
+          <p>
+            Ota meihin yhteyttä sähköpostitse tai puhelimitse keskustellaksesi
+            catering-vaihtoehdoista.
+          </p>
 
-    <div class="container mt-3">
-      <div class="row text-center">
-        <div class="col-md-4">
-          <h3>Oulu</h3>
+          <a href="mailto:marlena@gourmetstreetfood.fi"
+            ><p>marlena@gourmetstreetfood.fi</p></a
+          >
+          <a href="tel:+358505754091"><p>050 575 4091</p></a>
         </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4 d-none d-md-block">
-          <h3>Kuopio</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mb-5 mt-3">
-      <div class="row text-center">
-        <div class="col-6 col-md-2">
-          <!-- change col-md-2 to col-md-3 for no spacing -->
-          <a href="oulutalvi.html">
-            <img
-              src="images/ouluWinter.jpg"
-              alt="Oulun ravintola talvella"
-              class="rounded-circle img-fluid"
-            />
-            <a
-              href="oulutalvi.html"
-              class="btn btn-white btn-outline-primary mt-3 bluetext"
-              >Talvi</a
-            >
-          </a>
-        </div>
-        <div class="col-6 col-md-2">
-          <a href="oulukesa.html">
-            <img
-              src="images/ouluKesa.jpg"
-              alt="Oulun ravintola kesällä"
-              class="rounded-circle img-fluid"
-            />
-            <a
-              href="oulukesa.html"
-              class="btn btn-white btn-outline-primary mt-3 bluetext"
-              >Kesä</a
-            >
-          </a>
-        </div>
-
-        <div class="col-4"></div>
-        <!-- this is the space between the 4 circles -->
-
-        <div class="col-sm-6 mt-4 d-block d-md-none">
-          <div class="col-12 d-block d-md-none">
-            <hr />
-          </div>
-          <h3>Kuopio</h3>
-        </div>
-
-        <div class="col-6 col-md-2 mt-3 mt-md-0">
-          <a href="kuopiotalvi.html">
-            <img
-              src="images/kuopioTalvi.jpg"
-              alt="Kuopion ravintola talvella, sijaitsee Apajassa"
-              class="rounded-circle img-fluid"
-            />
-            <a
-              href="kuopiotalvi.html"
-              class="btn btn-white btn-outline-primary mt-3 bluetext"
-              >Talvi</a
-            >
-          </a>
-        </div>
-        <div class="col-6 col-md-2 mt-3 mt-md-0">
-          <a href="kuopiokesa.html">
-            <img
-              src="images/kuopiotoriKesa.jpg"
-              alt="Kuopion ravintola kesällä, sijaitsee Kuopion torilla"
-              class="rounded-circle img-fluid"
-            />
-            <a
-              href="kuopiokesa.html"
-              class="btn btn-white btn-outline-primary mt-3 bluetext"
-              >Kesä</a
-            >
-          </a>
-        </div>
+        <div class="col-md-2 mb-5"></div>
       </div>
     </div>
 
@@ -357,5 +329,6 @@
     </footer>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/catering.js"></script>
   </body>
 </html>
