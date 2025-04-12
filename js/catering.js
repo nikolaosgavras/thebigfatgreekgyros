@@ -1,4 +1,11 @@
 function sendEmail() {
+  // Get customer information
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  // Get selected options
   let selectedProteins = [];
   let selectedVeggies = [];
 
@@ -14,7 +21,17 @@ function sendEmail() {
       selectedVeggies.push(checkbox.value);
     });
 
-  // Validation
+  // Basic validation
+  if (!name) {
+    alert("Nimi on pakollinen tieto.");
+    return;
+  }
+
+  if (!email) {
+    alert("Sähköposti on pakollinen tieto.");
+    return;
+  }
+
   if (selectedProteins.length < 2) {
     alert("Valitse vähintään 2 proteiinivaihtoehtoa.");
     return;
@@ -25,18 +42,22 @@ function sendEmail() {
     return;
   }
 
-  let email = "marlena@gourmetstreetfood.fi"; // The email from the contact section
-  let subject = "Catering-tilaus";
-  let body =
+  const recipientEmail = "marlena@gourmetstreetfood.fi";
+  const subject = "Catering-tilaus";
+  const body =
     "Catering-tilaus:\n\n" +
+    "Nimi: " + name + "\n" +
+    "Sähköposti: " + email + "\n" +
+    "Puhelinnumero: " + phone + "\n\n" +
+    (message ? "Lisätietoja: " + message + "\n\n" : "") +
     "Proteiinivaihtoehdot:\n- " +
     selectedProteins.join("\n- ") +
     "\n\nKasvisvaihtoehdot:\n- " +
     selectedVeggies.join("\n- ");
 
-  let mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+  const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(body)}`;
 
-  window.location.href = mailtoLink;
+  window.open(mailtoLink, '_blank');
 }
