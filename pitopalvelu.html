@@ -19,7 +19,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The Big Fat Greek Gyros</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="icon"
@@ -130,41 +129,226 @@
               href="tel:+358505754091"
               >050 575 4091</a
             >
-            <!-- There is 2 restaurants, one in oulu and one in kuopio, what number to use? -->
-            <!-- d none  d lg inline scales for desktop -->
           </div>
         </div>
       </div>
     </nav>
 
-    <div class="container my-3">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="d-none d-md-block col-md-8">
-          <img src="images/cateringmenu.png" width="100%" alt="" />
-        </div>
-        <div class="d block d-md-none col-sm-12">
-          <img src="images/cateringmenu.png" width="100%" alt="" />
-        </div>
-        <div class="col-md-2"></div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 text-center mb-5 mt-3">
-          <p>
-            Ota meihin yhteyttä sähköpostitse tai puhelimitse keskustellaksesi
-            catering-vaihtoehdoista.
+        <div class="col-md-8">
+          <br />
+          <h2 class="text-center pb-3">Catering</h2>
+          <p class="text-center">
+            Lähetä tällä lomakkeella helposti sähköposti meille, <br />
+            otamme sinuun yhteyttä mahdollisimman pian. <br />
+            Voit myös soittaa tai lähettää sähköpostia normaalisti, <br />
+            mikäli alla oleva lomake ei toimi.
           </p>
 
-          <a href="mailto:marlena@gourmetstreetfood.fi"
-            ><p>marlena@gourmetstreetfood.fi</p></a
+          <form
+            onsubmit="event.preventDefault(); sendEmail();"
+            class="text-center"
           >
-          <a href="tel:+358505754091"><p>050 575 4091</p></a>
+            <div class="row mt-4 justify-content-center">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nimi</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Anna nimesi"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Sähköposti</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Anna sähköpostiosoitteesi"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Puhelinnumero</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    placeholder="Anna puhelinnumerosi"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Lisätietoja</label>
+                  <textarea
+                    class="form-control noresize"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Kirjoita viestisi tähän"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-4 justify-content-center">
+              <div class="col-md-6">
+                <h4 class="mb-3">Valitse vähintään 2 proteiinivaihtoehtoa:</h4>
+                <div class="form-check">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Lammas-stifado (viljaton, M)"
+                    id="protein1"
+                  />
+                  <label class="form-check-label" for="protein1"
+                    >Lammas-stifado (viljaton, M)</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Nauta-stifado (viljaton, M)"
+                    id="protein2"
+                  />
+                  <label class="form-check-label" for="protein2"
+                    >Nauta-stifado (viljaton, M)</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Soutsukakia naudanlihavartaat"
+                    id="protein3"
+                  />
+                  <label class="form-check-label" for="protein3"
+                    >Soutsukakia naudanlihavartaat</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Kana Gyros (G)"
+                    id="protein4"
+                  />
+                  <label class="form-check-label" for="protein4"
+                    >Kana Gyros (G)</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Kana Souvlaki (viljaton, M)"
+                    id="protein5"
+                  />
+                  <label class="form-check-label" for="protein5"
+                    >Kana Souvlaki (viljaton, M)</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Moussaka naudanlihalla"
+                    id="protein6"
+                  />
+                  <label class="form-check-label" for="protein6"
+                    >Moussaka naudanlihalla</label
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 text-center">
+                <h4 class="mb-3">Valitse vähintään 2 kasvisvaihtoehtoa:</h4>
+                <div class="form-check">
+                  <input
+                    class="form-check-input veggie-option"
+                    type="checkbox"
+                    name="veggie[]"
+                    value="Arakas; porkkana-herne uunipaistos tomaattikastikkeessa (viljaton, M)"
+                    id="veggie1"
+                  />
+                  <label class="form-check-label" for="veggie1">
+                    Arakas; porkkana-herne uunipaistos tomaattikastikkeessa
+                    (viljaton, M)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input veggie-option"
+                    type="checkbox"
+                    name="veggie[]"
+                    value="Soufiko; uunikasviksia fetajuustolla (viljaton) / ilman fetajuustoa (viljaton, M)"
+                    id="veggie2"
+                  />
+                  <label class="form-check-label" for="veggie2">
+                    Soufiko; uunikasviksia fetajuustolla (viljaton) / ilman
+                    fetajuustoa (viljaton, M)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input veggie-option"
+                    type="checkbox"
+                    name="veggie[]"
+                    value="Paahdetut punajuuret porkkanoilla ja fetajuustolla sitruuna-hunajakastikeella (viljaton)"
+                    id="veggie3"
+                  />
+                  <label class="form-check-label" for="veggie3">
+                    Paahdetut punajuuret porkkanoilla ja fetajuustolla
+                    sitruuna-hunajakastikeella (viljaton)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input veggie-option"
+                    type="checkbox"
+                    name="veggie[]"
+                    value="Gigantes; jättipavut tomaattikastikkeessa fetajuustolla (viljaton)"
+                    id="veggie4"
+                  />
+                  <label class="form-check-label" for="veggie4"
+                    >Gigantes; jättipavut tomaattikastikkeessa fetajuustolla
+                    (viljaton)</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <p class="text-dark">
+                g = Gluteeniton / Gluten free <br />
+                vl = vähälaktoosinen / low lactose <br />
+                L = laktoositon / lactose free <br />
+                k = kananmunaton / egg free <br />
+                m = maidoton / milk free <br />
+                veg = vegaaninen / vegan <br />
+                viljaton = ei sisällä vehnää, kauraa, ohraa tai ruista / does
+                not have wheat, oat, barley or rye
+              </p>
+            </div>
+            <button type="submit" class="btn btn-outline-primary border-2 mt-3 mb-5">
+              Lähetä lomake
+            </button>
+          </form>
         </div>
-        <div class="col-md-2 mb-5"></div>
       </div>
     </div>
 
@@ -292,5 +476,6 @@
     </footer>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/catering.js"></script>
   </body>
 </html>

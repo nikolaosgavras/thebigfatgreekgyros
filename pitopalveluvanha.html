@@ -130,226 +130,21 @@
               href="tel:+358505754091"
               >050 575 4091</a
             >
+            <!-- There is 2 restaurants, one in oulu and one in kuopio, what number to use? -->
+            <!-- d none  d lg inline scales for desktop -->
           </div>
         </div>
       </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container my-3">
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8">
-          <br />
-          <h2 class="text-center pb-3">Catering</h2>
-
-          <form
-            onsubmit="event.preventDefault(); sendEmail();"
-            class="text-center"
-          >
-            <div class="row mt-4 justify-content-center">
-              <div class="col-md-6">
-                <div class="mb-3">
-                  <label for="name" class="form-label">Nimi</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    name="name"
-                    placeholder="Anna nimesi"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Sähköposti</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    placeholder="Anna sähköpostiosoitteesi"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="phone" class="form-label">Puhelinnumero</label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="phone"
-                    name="phone"
-                    placeholder="Anna puhelinnumerosi"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="message" class="form-label">Lisätietoja</label>
-                  <textarea
-                    class="form-control"
-                    id="message"
-                    name="message"
-                    rows="4"
-                    placeholder="Kirjoita viestisi tähän"
-                    required
-                  ></textarea>
-                </div>
-              </div>
-            </div>
-
-            <div class="row mb-4 justify-content-center">
-              <div class="col-md-6">
-                <h4 class="mb-3">Valitse vähintään 2 proteiinivaihtoehtoa:</h4>
-                <div class="form-check d-flex justify-content-center">
-                  <div>
-                    <input
-                      class="form-check-input protein-option"
-                      type="checkbox"
-                      name="protein[]"
-                      value="Lammas-stifado (viljaton, M)"
-                      id="protein1"
-                    />
-                    <label class="form-check-label" for="protein1"
-                      >Lammas-stifado (viljaton, M)</label
-                    >
-                  </div>
-                </div>
-                <div class="form-check d-flex justify-content-center">
-                  <div>
-                    <input
-                      class="form-check-input protein-option"
-                      type="checkbox"
-                      name="protein[]"
-                      value="Nauta-stifado (viljaton, M)"
-                      id="protein2"
-                    />
-                    <label class="form-check-label" for="protein2"
-                      >Nauta-stifado (viljaton, M)</label
-                    >
-                  </div>
-                </div>
-                <div class="form-check d-flex justify-content-center">
-                  <div>
-                    <input
-                      class="form-check-input protein-option"
-                      type="checkbox"
-                      name="protein[]"
-                      value="Soutsukakia naudanlihavartaat"
-                      id="protein3"
-                    />
-                    <label class="form-check-label" for="protein3"
-                      >Soutsukakia naudanlihavartaat</label
-                    >
-                  </div>
-                </div>
-                <div class="form-check d-flex justify-content-center">
-                  <div>
-                    <input
-                      class="form-check-input protein-option"
-                      type="checkbox"
-                      name="protein[]"
-                      value="Kana Gyros (G)"
-                      id="protein4"
-                    />
-                    <label class="form-check-label" for="protein4"
-                      >Kana Gyros (G)</label
-                    >
-                  </div>
-                </div>
-                <div class="form-check d-flex justify-content-center">
-                  <div>
-                    <input
-                      class="form-check-input protein-option"
-                      type="checkbox"
-                      name="protein[]"
-                      value="Kana Souvlaki (viljaton, M)"
-                      id="protein5"
-                    />
-                    <label class="form-check-label" for="protein5"
-                      >Kana Souvlaki (viljaton, M)</label
-                    >
-                  </div>
-                </div>
-                <div class="form-check d-flex justify-content-center">
-                  <div>
-                    <input
-                      class="form-check-input protein-option"
-                      type="checkbox"
-                      name="protein[]"
-                      value="Moussaka naudanlihalla"
-                      id="protein6"
-                    />
-                    <label class="form-check-label" for="protein6"
-                      >Moussaka naudanlihalla</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 text-center">
-                <h4 class="mb-3">Valitse vähintään 2 kasvisvaihtoehtoa:</h4>
-                <div class="form-check d-flex justify-content-center">
-                  <div>
-                    <input
-                      class="form-check-input veggie-option"
-                      type="checkbox"
-                      name="veggie[]"
-                      value="Arakas; porkkana-herne uunipaistos tomaattikastikkeessa (viljaton, M)"
-                      id="veggie1"
-                    />
-                    <label class="form-check-label" for="veggie1"
-                      >Arakas; porkkana-herne uunipaistos tomaattikastikkeessa
-                      (viljaton, M)</label
-                    >
-                  </div>
-                </div>
-                <div class="form-check d-flex justify-content-center">
-                  <div>
-                    <input
-                      class="form-check-input veggie-option"
-                      type="checkbox"
-                      name="veggie[]"
-                      value="Soufiko; uunikasviksia fetajuustolla (viljaton) / ilman fetajuustoa (viljaton, M)"
-                      id="veggie2"
-                    />
-                    <label class="form-check-label" for="veggie2"
-                      >Soufiko; uunikasviksia fetajuustolla (viljaton) / ilman
-                      fetajuustoa (viljaton, M)</label
-                    >
-                  </div>
-                </div>
-                <div class="form-check d-flex justify-content-center">
-                  <div>
-                    <input
-                      class="form-check-input veggie-option"
-                      type="checkbox"
-                      name="veggie[]"
-                      value="Paahdetut kasvikset"
-                      id="veggie3"
-                    />
-                    <label class="form-check-label" for="veggie3"
-                      >Paahdetut kasvikset</label
-                    >
-                  </div>
-                </div>
-                <div class="form-check d-flex justify-content-center">
-                  <div>
-                    <input
-                      class="form-check-input veggie-option"
-                      type="checkbox"
-                      name="veggie[]"
-                      value="Dolmades (viininlehtikääryleet)"
-                      id="veggie4"
-                    />
-                    <label class="form-check-label" for="veggie4"
-                      >Dolmades (viininlehtikääryleet)</label
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-outline-primary border-2 mt-3">
-              Lähetä lomake
-            </button>
-          </form>
+        <div class="d-none d-md-block col-md-8">
+          <img src="images/cateringmenu.png" width="100%" alt="" />
+        </div>
+        <div class="d block d-md-none col-sm-12">
+          <img src="images/cateringmenu.png" width="100%" alt="" />
         </div>
         <div class="col-md-2"></div>
       </div>
@@ -497,6 +292,5 @@
     </footer>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/catering.js"></script>
   </body>
 </html>

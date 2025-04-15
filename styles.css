@@ -250,3 +250,8 @@ body {
 .form-check:hover {
   background-color: rgba(13, 110, 253, 0.05);
 }
+
+.noresize {
+  resize: none;
+}
+
