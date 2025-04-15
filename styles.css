@@ -255,3 +255,26 @@ body {
   resize: none;
 }
 
+/* Mobile checkbox fixes */
+@media (max-width: 767px) {
+  .form-check {
+    text-align: left;
+    display: flex;
+    padding-left: 1.5rem;
+  }
+  
+  .form-check-input {
+    position: absolute;
+    margin-top: 0.3rem;
+    margin-left: -1.5rem;
+  }
+  
+  .form-check-label {
+    margin-left: 0 !important;
+  }
+  
+  .col-md-6.text-center h4 {
+    text-align: left;
+    margin-left: 0.5rem;
+  }
+}
