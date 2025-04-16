@@ -128,38 +128,236 @@
               href="tel:+358505754091"
               >050 575 4091</a
             >
-            <!-- There is 2 restaurants, one in oulu and one in kuopio, what number to use? -->
-            <!-- d none  d lg inline scales for desktop -->
           </div>
         </div>
       </div>
     </nav>
 
-    <div class="container my-3">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="d-none d-md-block col-md-8">
-          <img src="../images/cateringmenu.png" width="100%" alt="" />
-        </div>
-        <div class="d block d-md-none col-sm-12">
-          <img src="../images/cateringmenu.png" width="100%" alt="" />
-        </div>
-        <div class="col-md-2"></div>
-      </div>
-    </div>
+        <div class="col-md-8">
+          <br />
+          <h2 class="text-center pb-3">Catering</h2>
+          <p class="text-center">
+            Please use this form to quickly get in touch with us. <br />We will
+            respond to your message as soon as possible. <br />
+            <br />
+            If the form is not functioning, <br />
+            don’t hesitate to contact us directly via email or phone.
+          </p>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 text-center mb-5 mt-3">
-          <p>Contact us by email or phone to discuss catering options.</p>
-
-          <a href="mailto:marlena@gourmetstreetfood.fi"
-            ><p>marlena@gourmetstreetfood.fi</p></a
+          <form
+            onsubmit="event.preventDefault(); sendEmail();"
+            class="text-center"
           >
-          <a href="tel:+358505754091"><p>050 575 4091</p></a>
+            <div class="row mt-4 justify-content-center">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label"
+                    >More information</label
+                  >
+                  <textarea
+                    class="form-control noresize"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Enter any additional information you would like to share, like the date of the event, number of guests, etc."
+                    required
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-4 justify-content-center">
+              <div class="col-md-6">
+                <h4 class="mb-3 text-md-start text-center">
+                  Select at least 2 protein options:
+                </h4>
+                <div class="form-check text-start">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Lammas-stifado (viljaton, M)"
+                    id="protein1"
+                  />
+                  <label class="form-check-label ms-1" for="protein1"
+                    >Lammas-stifado (viljaton, M)</label
+                  >
+                </div>
+                <div class="form-check text-start">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Nauta-stifado (viljaton, M)"
+                    id="protein2"
+                  />
+                  <label class="form-check-label ms-1" for="protein2"
+                    >Nauta-stifado (viljaton, M)</label
+                  >
+                </div>
+                <div class="form-check text-start">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Soutsukakia naudanlihavartaat"
+                    id="protein3"
+                  />
+                  <label class="form-check-label ms-1" for="protein3"
+                    >Soutsukakia naudanlihavartaat</label
+                  >
+                </div>
+                <div class="form-check text-start">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Kana Gyros (G)"
+                    id="protein4"
+                  />
+                  <label class="form-check-label ms-1" for="protein4"
+                    >Kana Gyros (G)</label
+                  >
+                </div>
+                <div class="form-check text-start">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Kana Souvlaki (viljaton, M)"
+                    id="protein5"
+                  />
+                  <label class="form-check-label ms-1" for="protein5"
+                    >Kana Souvlaki (viljaton, M)</label
+                  >
+                </div>
+                <div class="form-check text-start">
+                  <input
+                    class="form-check-input protein-option"
+                    type="checkbox"
+                    name="protein[]"
+                    value="Moussaka naudanlihalla"
+                    id="protein6"
+                  />
+                  <label class="form-check-label ms-1" for="protein6"
+                    >Moussaka naudanlihalla</label
+                  >
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h4 class="mb-3 text-md-start text-center">
+                  Select at least 2 vegetable options:
+                </h4>
+                <div class="form-check text-start">
+                  <input
+                    class="form-check-input veggie-option"
+                    type="checkbox"
+                    name="veggie[]"
+                    value="Arakas; porkkana-herne uunipaistos tomaattikastikkeessa (viljaton, M)"
+                    id="veggie1"
+                  />
+                  <label class="form-check-label ms-1" for="veggie1">
+                    Arakas; porkkana-herne uunipaistos tomaattikastikkeessa
+                    (viljaton, M)
+                  </label>
+                </div>
+                <div class="form-check text-start">
+                  <input
+                    class="form-check-input veggie-option"
+                    type="checkbox"
+                    name="veggie[]"
+                    value="Soufiko; uunikasviksia fetajuustolla (viljaton) / ilman fetajuustoa (viljaton, M)"
+                    id="veggie2"
+                  />
+                  <label class="form-check-label ms-1" for="veggie2">
+                    Soufiko; uunikasviksia fetajuustolla (viljaton) / ilman
+                    fetajuustoa (viljaton, M)
+                  </label>
+                </div>
+                <div class="form-check text-start">
+                  <input
+                    class="form-check-input veggie-option"
+                    type="checkbox"
+                    name="veggie[]"
+                    value="Paahdetut punajuuret porkkanoilla ja fetajuustolla sitruuna-hunajakastikeella (viljaton)"
+                    id="veggie3"
+                  />
+                  <label class="form-check-label ms-1" for="veggie3">
+                    Paahdetut punajuuret porkkanoilla ja fetajuustolla
+                    sitruuna-hunajakastikeella (viljaton)
+                  </label>
+                </div>
+                <div class="form-check text-start">
+                  <input
+                    class="form-check-input veggie-option"
+                    type="checkbox"
+                    name="veggie[]"
+                    value="Gigantes; jättipavut tomaattikastikkeessa fetajuustolla (viljaton)"
+                    id="veggie4"
+                  />
+                  <label class="form-check-label ms-1" for="veggie4"
+                    >Gigantes; jättipavut tomaattikastikkeessa fetajuustolla
+                    (viljaton)</label
+                  >
+                </div>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-outline-primary border-2 mt-3 mb-5"
+            >
+              Submit your request
+            </button>
+          </form>
+          <div class="col-md-12 text-center">
+            <p class="text-dark">
+              g = Gluteeniton / Gluten free <br />
+              vl = vähälaktoosinen / low lactose <br />
+              L = laktoositon / lactose free <br />
+              k = kananmunaton / egg free <br />
+              m = maidoton / milk free <br />
+              veg = vegaaninen / vegan <br />
+              viljaton = ei sisällä vehnää, kauraa, ohraa tai ruista / does not
+              have wheat, oat, barley or rye
+            </p>
+          </div>
         </div>
-        <div class="col-md-2 mb-5"></div>
       </div>
     </div>
 
@@ -287,5 +485,6 @@
     </footer>
 
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/catering.js"></script>
   </body>
 </html>
