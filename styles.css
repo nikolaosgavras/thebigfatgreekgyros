@@ -139,6 +139,7 @@ h2 {
 h3 {
     font-family: "Poppins", serif;
     font-weight: 550;
+    color: #003297;
 }
 
 h5 {
@@ -315,6 +316,13 @@ body {
     margin-left: 0.5rem; /* Adjust spacing as needed */
     white-space: nowrap; /* Prevent price from wrapping */
     flex-shrink: 0; /* Prevent price from shrinking */
+}
+
+/* Add wrapping behavior for menu item titles */
+.menu-item-title span:first-child {
+    flex: 1; /* Allow the title to take remaining space */
+    min-width: 0; /* Enable text wrapping */
+    word-wrap: break-word; /* Enable word wrapping */
 }
 
 /* Style for dessert items */
